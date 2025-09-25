@@ -1,5 +1,29 @@
+@font-face {
+    font-family: 'Roboto';
+    src: 
+    url(./assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.woff2),
+    url(./assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Noto';
+    src: url(https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap)
+    format('woff2');
+}
+
+:root{
+    --primary-hue: 222deg;
+    --primary-color : hsl(var(--primary-hue) 62% 31%);
+    --secondary-color : hsl(222 62% 41%);
+    --bg-color : hsl(180 2% 91%);
+    --text-color: hsl(210 3% 14%);
+    --secondary-text-color: #f5f5f5;
+    
+}
+
 html{
     font-size: 10px;
+
 }
 
 
@@ -7,57 +31,53 @@ body {
     font-family: 'Roboto', 'sans-serif';
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    
+    background-color: var(--bg-color); 
 }
 
-@font-face {
-    font-family: Roboto;
-    src: url(./assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
-}
-
-@font-face {
-    font-family: Domine;
-    src: url(https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
-}
 
 header {
     margin-left: 1rem;
     margin-right: 1rem; 
-    background-color: #302f2f;
     text-align: left;
 }
 
 h1 {
-    font-family: 'Domine', 'serif';
+    font-family: 'Noto', 'serif';
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color );
     text-align: center;
     padding: 1rem;
     font-size: 5rem;
-    color: #ffffff;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
+
+span{
+    color: var(--secondary-color);
+}
+
 nav{
-    
+    height: 5vh;
+    background-color: var(--primary-color);
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 5rem;
 }
 nav ul {
+    height: 10vh;
     text-align: center;
     list-style-type: none;
     padding: 1rem;
-    background-color: #302f2f;
 }
 
 nav ul li {
+    height: 1.7rem;
     display: inline;
     margin-right: 1.8rem;
 }
 
 a{
+    
     text-decoration: none;
     color: #dbdbdb;
     font-size: 1.8rem;
@@ -65,23 +85,20 @@ a{
 
 a:hover{
     color: white;
+    background-color: var(--secondary-color);
 }
 
 section {
-    
+    color: var(--text-color);
     border-radius: .7rem;
     padding: 1.5rem;
     border: 1px solid #e0dada;
-    box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);
-    /* margin-top: 20px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 3rem; */
+    box-shadow: 0px 10px 10px -8px #1E3C8038;
     margin: 2rem 1.5rem 3rem 1.5rem;
 }
 
 section h2 {
-    text-align: center;
+    
     font-size: 2.5rem;
     color: #000000;
     font-weight: bold;
@@ -95,13 +112,10 @@ section p {
 
 footer {
     margin: 5rem 1rem 1rem 0;
-    /* margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 5rem; */
     font-weight: 600;
     text-align: center;
     padding: .2rem;
     font-size: 1.5rem;
-    background-color: #302f2f;
-    color: rgb(233, 225, 225);
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
 }
